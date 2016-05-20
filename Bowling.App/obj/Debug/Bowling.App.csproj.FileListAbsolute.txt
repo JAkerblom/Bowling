@@ -1,0 +1,5 @@
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.App\bin\Debug\Bowling.App.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.App\bin\Debug\Bowling.App.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.App\obj\Debug\Bowling.App.csprojResolveAssemblyReference.cache
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.App\obj\Debug\Bowling.App.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.App\obj\Debug\Bowling.App.pdb

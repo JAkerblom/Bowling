@@ -1,1 +1,8 @@
 C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Runner\bin\Debug\Bowling.Runner.exe.config
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Runner\bin\Debug\Bowling.Runner.exe
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Runner\bin\Debug\Bowling.Runner.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Runner\bin\Debug\Bowling.App.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Runner\bin\Debug\Bowling.App.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Runner\obj\Debug\Bowling.Runner.csprojResolveAssemblyReference.cache
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Runner\obj\Debug\Bowling.Runner.exe
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Runner\obj\Debug\Bowling.Runner.pdb

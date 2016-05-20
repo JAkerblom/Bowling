@@ -1,0 +1,15 @@
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\obj\Debug\Bowling.Tests.csprojResolveAssemblyReference.cache
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\Bowling.Tests.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\Bowling.Tests.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\Bowling.App.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\FluentAssertions.Core.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\FluentAssertions.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\nunit.framework.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\Bowling.App.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\FluentAssertions.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\FluentAssertions.xml
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\FluentAssertions.Core.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\FluentAssertions.Core.xml
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\bin\Debug\nunit.framework.xml
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\obj\Debug\Bowling.Tests.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Bowling\Bowling.Tests\obj\Debug\Bowling.Tests.pdb

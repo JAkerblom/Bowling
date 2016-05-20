@@ -1,0 +1,38 @@
+För varje frame
+ Kast 1: 
+  Kasta kulan och slå ner ett visst antal käglor
+  Har föregående frame en utstående spare?
+   J: Kvitta ut föregående frames score med detta kastet
+  Var kast1 en 10a? (strike)
+   Flagga strike hos frame
+   Är föregående frame samt i sin tur föregående frame en strike?
+    J: Kvitta ut nästföregående frames score med detta kastet
+   Gå till nästa frame
+Kast 2:
+ Kasta kulan och slå ner ett visst antal käglor
+ Har föregående frame en strike?
+  J: Kvitta ut föregående frames score med denna frames total
+ Är summan av denna frames score mindre än 10?
+  J: Kvitta ut den här framens score med summan av föregående frames totalscore och denna frames resultat
+  N: Flagga spare hos frame
+ Gå till nästa frame
+
+När man kommer till frame 10:
+Kast 1: 
+  Kasta kulan och slå ner ett visst antal käglor
+  Har föregående frame en utstående spare?
+   J: Kvitta ut föregående frames score med detta kastet
+  Var kast1 en 10a? (strike)
+   Flagga att tre kast är giltiga
+   Är föregående frame samt i sin tur föregående frame en strike?
+    J: Kvitta ut nästföregående frames score med detta kastet
+Kast 2:
+ Kasta kulan och slå ner ett visst antal käglor
+ Har föregående frame en strike?
+  J: Kvitta ut föregående frames score med denna frames total hittills
+ Är summan av denna frames score hittills mindre än 10?
+  N: Flagga att tre kast är giltiga
+  J: Har man tre giltiga kast? (eller två)
+      N: Kvitta ut den här framens score med summan av föregående frames totalscore och denna frames resultat
+         Avsluta Game
+      J: Gå vidare till nästa kast 
