@@ -24,12 +24,13 @@ namespace Bowling.App
     public int Number { get { return _frameNumber; } }
     public int[] Rolls { get; set; }
     public int FirstRollScore { get; set; }
+    public int SecondRollScore { get; set; }
     public bool FrameHasSpare
     {
       get
       {
         // Rolls sum to 10 through 2 rolls
-        return ((Rolls[0] + Rolls[1]) == 10) && (Rolls[1] != -1);
+        return ((Rolls[0] + Rolls[1]) == 10) && (Rolls[1] != 0);
       }
     }
     public bool FrameHasStrike
@@ -51,6 +52,7 @@ namespace Bowling.App
     public int TurnNr { get { return _turn; } }
     public bool IsDone { get { return _turn == 2; } } // Only applies to 1-9
 
+
     /// <summary>
     ///   Adds the rolled pins of the current game to the frame
     ///   Also makes sure to keep track of what turn number is used in the frame
@@ -62,16 +64,26 @@ namespace Bowling.App
     public void AddRoll(int pins)
     {
       Rolls[_turn] = pins;
-      if (_turn == 0) FirstRollScore = pins;
+      if (_turn == 0)
+        FirstRollScore = pins;
+      else if (_turn == 1)
+        SecondRollScore = pins;
+
       _turn++;
 
       if (_frameNumber == 10)
+      {
         if (_turn == 1)
+        {
           if (Rolls[0] == 10)
             _thirdTurnAllowed = true;
+        }
         else if (_turn == 2)
+        {
           if (Rolls[0] + Rolls[1] == 10)
             _thirdTurnAllowed = true;
+        }
+      }
     }
 
     /// <summary>
@@ -81,13 +93,24 @@ namespace Bowling.App
     ///       and a score is calcuable
     /// </summary>
     /// <returns>Returns whether or not a frame has a calcuable score</returns>
+    /// <exception cref="_frameNumber=10">
+    ///   The tenth frame is only complete if (three turns allowed) three rolls have been made
+    ///   or (three turns not allowed) two rolls have been made
+    /// </exception>
+    /// <exception cref="this.FrameHasStrike">
+    ///   If not in tenth frame and the frame has a strike
+    ///     if the next frame also has a strike, 
+    ///       this frame is only complete if the next frame after that has made one roll or more.
+    ///     otherwise the frame is calcuable as long as the next frame is done. 
+    /// </exception>
     public bool IsComplete()
     {
       if (_frameNumber == 10)
       {
         if (_thirdTurnAllowed)
           return _turn == 3;
-        else return _turn == 2;
+        else
+          return _turn == 2;
       }
       else
       {
@@ -96,10 +119,12 @@ namespace Bowling.App
         else if (this.FrameHasSpare)
           return Next.TurnNr > 0;
         else if (this.FrameHasStrike)
+        {
           if (Next.FrameHasStrike)
             return Next.Next.TurnNr > 0;
           else
             return Next.TurnNr > 0;
+        }
       }
 
       return false;
@@ -122,9 +147,16 @@ namespace Bowling.App
     ///    score is this frame's score
     ///    + the next frame's score
     /// </example>
+    /// <exception cref="_frameNumber=10">
+    ///   The score of the tenth frame is always the sum of the frame's rolls
+    /// </exception>
+    /// <exception cref="_frameNumber=9">
+    ///   If there is a strike in the ninth frame 
+    ///   the point logic is always dependent on just the first and second throw of the tenth frame.
+    /// </exception>
     public void CalculateFrameScore()
     {
-      int baseScore = Previous.TotalFrameScore;
+      int baseScore = (Number == 1) ? 0 : Previous.TotalFrameScore;
       int score = 0;
 
       if (_frameNumber == 10)
@@ -136,7 +168,17 @@ namespace Bowling.App
         else if (this.FrameHasSpare)
           score = LocalFrameScore + Next.FirstRollScore;
         else if (this.FrameHasStrike)
-          score = LocalFrameScore + Next.LocalFrameScore;
+        {
+          if (_frameNumber == 9)
+            score = LocalFrameScore + Next.FirstRollScore + Next.SecondRollScore;
+          else
+          {
+            if (Next.FrameHasStrike)
+              score = LocalFrameScore + Next.FirstRollScore + Next.Next.FirstRollScore;
+            else
+              score = LocalFrameScore + Next.LocalFrameScore;
+          }
+        }
       }
 
       TotalFrameScore = baseScore + score;
