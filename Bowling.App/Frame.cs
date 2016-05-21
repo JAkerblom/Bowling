@@ -25,6 +25,11 @@ namespace Bowling.App
     public int[] Rolls { get; set; }
     public int FirstRollScore { get; set; }
     public int SecondRollScore { get; set; }
+    public int TotalFrameScore { get; private set; }
+    public int LocalFrameScore { get { return Rolls.Sum(); } }
+    public int TurnNr { get { return _turn; } }
+    public bool IsDone { get { return _turn == 2; } } // Only applies to 1-9
+
     public bool FrameHasSpare
     {
       get
@@ -47,11 +52,6 @@ namespace Bowling.App
           return Rolls[0] == 10 || Rolls[1] == 10 || Rolls[2] == 10;
       } 
     }
-    public int TotalFrameScore { get; private set; }
-    public int LocalFrameScore { get { return Rolls.Sum(); } }
-    public int TurnNr { get { return _turn; } }
-    public bool IsDone { get { return _turn == 2; } } // Only applies to 1-9
-
 
     /// <summary>
     ///   Adds the rolled pins of the current game to the frame
